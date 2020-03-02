@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo相关问题</title>
+    <url>/all/hexo%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p> <a href="https://www.bilibili.com/video/av37122601" target="_blank" rel="noopener">https://www.bilibili.com/video/av37122601</a> </p>
+<a id="more"></a>
+
+
+
+
+
+<p> 每次修改完本地的文件后要执行以下命令，重新部署到github上：<br><code>hexo clean</code><br><code>hexo generate</code><br><code>hexo deploy</code></p>
+<p><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub<br><code>hexo help</code> # 查看帮助<br><code>hexo version</code> #查看Hexo的版本</p>
+<h2 id="报错总结"><a href="#报错总结" class="headerlink" title="报错总结"></a>报错总结</h2><p>1.出现 error deployer not found:git 或者 error deployer not found:github 的错误<br> 解决办法：执行 <code>npm install hexo-deployer-git --save</code></p>
+<p>2.出现类似 FATAL can not read a block mapping entry; a multiline key may not be an implicit key at line 70, column 1: … 错误<br> 解决办法：_config.yml中配置项的冒号后面要用空格隔开，再跟内容</p>
+<p>3.中文乱码问题<br> 解决办法：将文件的内容编码改为UTF8格式</p>
+<p>4.’hexo sever’能够成功运行，但是localhost:4000无法访问<br> 解决办法：执行<code>hexo s -p 5000</code>，改用其他端口启动</p>
+<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p><a href="https://www.jianshu.com/p/8681ab76da08" target="_blank" rel="noopener">https://www.jianshu.com/p/8681ab76da08</a> </p>
+<p><a href="https://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">https://www.jianshu.com/p/f054333ac9e6</a> </p>
+]]></content>
+      <tags>
+        <tag>all</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习</title>
+    <url>/all/%E7%A7%91%E7%A0%94%E8%AE%AD%E7%BB%83%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>科研训练-学习-实践</p>
+<a id="more"></a>
+
+<h1 id="任务2020-03-02"><a href="#任务2020-03-02" class="headerlink" title="任务2020-03-02"></a>任务2020-03-02</h1><h2 id="任务1-代码阅读"><a href="#任务1-代码阅读" class="headerlink" title="任务1:代码阅读"></a>任务1:代码阅读</h2><h3 id="使用Google-Colab"><a href="#使用Google-Colab" class="headerlink" title="使用Google Colab"></a>使用Google Colab</h3><p>使用Google的GPU</p>
+<p>可以当作linux系统的终端来使用</p>
+<p>指令同linux,在指令前加上”!”号</p>
+<p> <a href="https://www.jianshu.com/p/a42d69568966?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" target="_blank" rel="noopener">https://www.jianshu.com/p/a42d69568966?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a> </p>
+<p> <a href="https://zhuanlan.zhihu.com/p/54389036" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/54389036</a> </p>
+<p> <a href="https://www.jianshu.com/p/2cf00bb9db34" target="_blank" rel="noopener">https://www.jianshu.com/p/2cf00bb9db34</a> </p>
+<p> <a href="https://blog.csdn.net/qq_41185868/article/details/79638292" target="_blank" rel="noopener">https://blog.csdn.net/qq_41185868/article/details/79638292</a> </p>
+<p> <a href="https://www.jianshu.com/p/e6f1058614c0?from=timeline&amp;isappinstalled=0" target="_blank" rel="noopener">https://www.jianshu.com/p/e6f1058614c0?from=timeline&amp;isappinstalled=0</a> </p>
+<p> <a href="https://www.cnblogs.com/Terrypython/p/10824370.html" target="_blank" rel="noopener">https://www.cnblogs.com/Terrypython/p/10824370.html</a> </p>
+<p> <a href="http://www.elecfans.com/d/932975.html" target="_blank" rel="noopener">http://www.elecfans.com/d/932975.html</a> </p>
+<p> <a href="https://blog.csdn.net/qq_35493664/article/details/94726560" target="_blank" rel="noopener">https://blog.csdn.net/qq_35493664/article/details/94726560</a> 断线</p>
+<p> <a href="https://zhuanlan.zhihu.com/p/33344222?utm_source=wechat_session&amp;utm_medium=social" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33344222?utm_source=wechat_session&amp;utm_medium=social</a> </p>
+<h3 id="安装cv2"><a href="#安装cv2" class="headerlink" title="安装cv2"></a>安装cv2</h3><p><a href="https://blog.csdn.net/Hhytyq/article/details/90611274" target="_blank" rel="noopener">https://blog.csdn.net/Hhytyq/article/details/90611274</a> </p>
+<p>安装</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">pip <span class="keyword">install</span> opencv-python</span><br></pre></td></tr></table></figure>
+
+<p>测试</p>
+<figure class="highlight elm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br></pre></td></tr></table></figure>
+
+<h2 id="任务2-InceptionV3"><a href="#任务2-InceptionV3" class="headerlink" title="任务2:InceptionV3"></a>任务2:InceptionV3</h2><h2 id="任务3-Bi-LSTM"><a href="#任务3-Bi-LSTM" class="headerlink" title="任务3:Bi-LSTM"></a>任务3:Bi-LSTM</h2><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h2><p>1.考虑用conda安装而不是pip</p>
+<p>2.用conda安装之后仍然显示ModuleNoFound的话,考虑设置一个虚拟环境,然后把虚拟环境加入环境变量</p>
+<h2 id="PyTorch"><a href="#PyTorch" class="headerlink" title="PyTorch"></a>PyTorch</h2><p>创建多个虚拟环境进行管理</p>
+<p>好处是当不同版本切换的时候可以直接使用虚拟环境切换</p>
+<h2 id="安装cv2-1"><a href="#安装cv2-1" class="headerlink" title="安装cv2"></a>安装cv2</h2><p><a href="https://blog.csdn.net/Hhytyq/article/details/90611274" target="_blank" rel="noopener">https://blog.csdn.net/Hhytyq/article/details/90611274</a> </p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+</search>
