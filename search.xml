@@ -137,6 +137,7 @@
 <p>4.’hexo sever’能够成功运行，但是localhost:4000无法访问<br> 解决办法：执行<code>hexo s -p 5000</code>，改用其他端口启动</p>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://www.jianshu.com/p/8681ab76da08" target="_blank" rel="noopener">https://www.jianshu.com/p/8681ab76da08</a> </p>
 <p><a href="https://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">https://www.jianshu.com/p/f054333ac9e6</a> </p>
+<p> <a href="https://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="noopener">https://www.jianshu.com/p/7ab21c7f0674</a> </p>
 ]]></content>
       <tags>
         <tag>all</tag>

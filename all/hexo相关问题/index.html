@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="瓜">
 <meta property="og:description" content="https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av37122601">
 <meta property="article:published_time" content="2020-03-02T16:51:34.000Z">
-<meta property="article:modified_time" content="2020-03-12T11:07:58.795Z">
+<meta property="article:modified_time" content="2020-03-12T11:15:34.316Z">
 <meta property="article:author" content="Guaguastandup">
 <meta property="article:tag" content="all">
 <meta name="twitter:card" content="summary">
@@ -215,7 +215,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-12 19:07:58" itemprop="dateModified" datetime="2020-03-12T19:07:58+08:00">2020-03-12</time>
+                <time title="Modified: 2020-03-12 19:15:34" itemprop="dateModified" datetime="2020-03-12T19:15:34+08:00">2020-03-12</time>
               </span>
 
           
@@ -241,6 +241,7 @@
 <p>4.’hexo sever’能够成功运行，但是localhost:4000无法访问<br> 解决办法：执行<code>hexo s -p 5000</code>，改用其他端口启动</p>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://www.jianshu.com/p/8681ab76da08" target="_blank" rel="noopener">https://www.jianshu.com/p/8681ab76da08</a> </p>
 <p><a href="https://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">https://www.jianshu.com/p/f054333ac9e6</a> </p>
+<p> <a href="https://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="noopener">https://www.jianshu.com/p/7ab21c7f0674</a> </p>
 
     </div>
 
@@ -437,6 +438,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
