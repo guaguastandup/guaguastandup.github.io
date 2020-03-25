@@ -181,6 +181,143 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://guaguastandup.github.io/all/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Guaguastandup">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/all/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" class="post-title-link" itemprop="url">优先队列</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-23 15:08:03 / Modified: 15:14:03" itemprop="dateCreated datePublished" datetime="2020-03-23T15:08:03+08:00">2020-03-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt;q;<span class="comment">//小顶堆</span></span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>&gt; q;<span class="comment">//大顶堆,默认</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> c, fc;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> node&amp; a) <span class="keyword">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fc &lt; a.fc;<span class="comment">//大顶</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node&gt; q;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node2</span>&#123;</span><span class="comment">//重写仿函数</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">oprator</span><span class="params">()</span> <span class="params">(node a,node b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a,x&lt;b.x;<span class="comment">//大顶</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node,<span class="built_in">vector</span>&lt;node&gt;,node2&gt; q;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://guaguastandup.github.io/all/KMP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Guaguastandup">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/all/KMP/" class="post-title-link" itemprop="url">KMP</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-23 13:41:42 / Modified: 13:47:06" itemprop="dateCreated datePublished" datetime="2020-03-23T13:41:42+08:00">2020-03-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="prefix-function-前缀函数"><a href="#prefix-function-前缀函数" class="headerlink" title="prefix function 前缀函数"></a>prefix function 前缀函数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">prefix_function</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">pi</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> j = pi[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">while</span>(j&gt;<span class="number">0</span>&amp;&amp;t[i]!=t[j])j = pi[j - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(t[i]==t[j])j++;</span><br><span class="line">        pi[i] = j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pi;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="CF204E"><a href="#CF204E" class="headerlink" title="[CF204E]"></a>[CF204E]</h3><p>题意</p>
+<blockquote>
+<p>给定一主串,再查询某字符串是否可以由主串的两个子串拼接而成.</p>
+</blockquote>
+<p>思路</p>
+<blockquote>
+<p>正反向各kmp一次</p>
+<p>记录查询的字符串的前缀和后缀在主串中的位置</p>
+</blockquote>
+<p>代码:先空着,之前的代码写的不太对</p>
+<h3 id="CCPC秦皇岛"><a href="#CCPC秦皇岛" class="headerlink" title="[CCPC秦皇岛]"></a>[CCPC秦皇岛]</h3><p>题意</p>
+<blockquote>
+<p>跟找循环节有关</p>
+</blockquote>
+<p>思路</p>
+<blockquote>
+<p>正&amp;&amp;反</p>
+</blockquote>
+<p>代码 : <a href="http://xlorpaste.cn/kwgp23" target="_blank" rel="noopener">http://xlorpaste.cn/kwgp23</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://guaguastandup.github.io/all/Untitled/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -715,63 +852,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://guaguastandup.github.io/all/%E5%9B%BE%E8%AE%BA%E6%A8%A1%E6%9D%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Guaguastandup">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瓜">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/all/%E5%9B%BE%E8%AE%BA%E6%A8%A1%E6%9D%BF/" class="post-title-link" itemprop="url">图论模板</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-20 13:26:02" itemprop="dateCreated datePublished" datetime="2020-03-20T13:26:02+08:00">2020-03-20</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="图论模板"><a href="#图论模板" class="headerlink" title="图论模板"></a>图论模板</h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://guaguastandup.github.io/all/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%A8%A1%E6%9D%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -812,70 +892,6 @@
 
       
           <h1 id="动态规划模板"><a href="#动态规划模板" class="headerlink" title="动态规划模板"></a>动态规划模板</h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://guaguastandup.github.io/all/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%9D%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Guaguastandup">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瓜">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/all/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%9D%BF/" class="post-title-link" itemprop="url">数据结构模板</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-20 13:25:31" itemprop="dateCreated datePublished" datetime="2020-03-20T13:25:31+08:00">2020-03-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-21 23:18:47" itemprop="dateModified" datetime="2020-03-21T23:18:47+08:00">2020-03-21</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="数据结构模板"><a href="#数据结构模板" class="headerlink" title="数据结构模板"></a>数据结构模板</h1><h2 id="线段树"><a href="#线段树" class="headerlink" title="线段树"></a>线段树</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SegTree</span> &#123;</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> lson l,mid,rt&lt;&lt;1</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> rson mid+1,r,rt&lt;&lt;1|1</span></span><br><span class="line">    ll a[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line">    <span class="keyword">int</span> tag[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> rt)</span> </span>&#123;</span><br><span class="line">        a[rt] = min(a[rt &lt;&lt; <span class="number">1</span>], a[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        a[rt] += x;</span><br><span class="line">        tag[rt] += x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> rt)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!tag[rt])</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        push(rt &lt;&lt; <span class="number">1</span>, tag[rt]);</span><br><span class="line">        push(rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, tag[rt]);</span><br><span class="line">        tag[rt] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l = <span class="number">1</span>,<span class="keyword">int</span> r = n,<span class="keyword">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l==r) &#123;</span><br><span class="line">            a[rt] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        build(lson), build(rson);</span><br><span class="line">        pushup(rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> L, <span class="keyword">int</span> R, <span class="keyword">int</span> x, <span class="keyword">int</span> l = <span class="number">1</span>, <span class="keyword">int</span> r = n,<span class="keyword">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R) &#123;</span><br><span class="line">            push(rt, x);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        pushdown(rt);</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=m)</span><br><span class="line">            update(L, R, x, lson);</span><br><span class="line">        <span class="keyword">if</span>(R&gt;m)</span><br><span class="line">            update(L, R, x, rson);</span><br><span class="line">        pushup(rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">ll <span class="title">query</span><span class="params">(<span class="keyword">int</span> L, <span class="keyword">int</span> R, <span class="keyword">int</span> l = <span class="number">1</span>, <span class="keyword">int</span> r = n,<span class="keyword">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R) &#123;</span><br><span class="line">            <span class="keyword">return</span> a[rt];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        pushdown(rt);</span><br><span class="line">        <span class="keyword">if</span>(R&lt;=m)</span><br><span class="line">            <span class="keyword">return</span> query(L, R, lson);</span><br><span class="line">        <span class="keyword">if</span>(L&gt;m)</span><br><span class="line">            <span class="keyword">return</span> query(L, R, rson);</span><br><span class="line">        <span class="keyword">return</span> min(query(L, R, lson), query(L, R, rson));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; f;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -960,7 +976,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

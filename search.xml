@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>图联通问题</title>
+    <url>/all/%E5%9B%BE%E8%81%94%E9%80%9A%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="割边-Bridge"><a href="#割边-Bridge" class="headerlink" title="割边(Bridge)"></a>割边(Bridge)</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; ans;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; e[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">    dep[u] = dep[fa] + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> v:e[u]) &#123;</span><br><span class="line">        <span class="keyword">if</span>(v==fa)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>(!dep[v]) &#123;</span><br><span class="line">            dfs(v, u);</span><br><span class="line">            dp[u] += dp[v];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(dep[v]&gt;dep[u]) &#123;</span><br><span class="line">                dp[u]--;<span class="comment">//down from u</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(dep[v]&lt;dep[u]) &#123;</span><br><span class="line">                dp[u]++;<span class="comment">//up form u</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!dp[u]&amp;&amp;u!=<span class="number">1</span>)&#123;</span><br><span class="line">        brige = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>$dp[u]$=  (#of back-edges going up from u) ​− (# of back-edges going down from u) +$\sum dp[v]$</p>
+<p>如果一个点没有back-edge,那么说明图中存在桥</p>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><h3 id="Bertown-roads"><a href="#Bertown-roads" class="headerlink" title="Bertown roads"></a>Bertown roads</h3><p>CF118E</p>
+<p>题意</p>
+<blockquote>
+<p>给一张图n个点m条边，无向边；现在要将这张图变成具有m条单向边的图，并且保证任意两点之间相互到达</p>
+</blockquote>
+<p>思路</p>
+<blockquote>
+<p>DFS树，并且统计每个点的back-edge个数，如果为0则代表它与它的parent会形成割桥，则输出0即可</p>
+</blockquote>
+<p>链接 : <a href="https://xlorpaste.cn/28k1dx" target="_blank" rel="noopener">https://xlorpaste.cn/28k1dx</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>exgcd</title>
+    <url>/all/exgcd/</url>
+    <content><![CDATA[<h1 id="扩展GCD"><a href="#扩展GCD" class="headerlink" title="扩展GCD"></a>扩展GCD</h1><p>给定a,b</p>
+<p>求$ax=1(mod \ b)$ 的最小整数解</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line">ll x, y;</span><br><span class="line"><span class="function">ll <span class="title">exgcd</span><span class="params">(ll a, ll b, ll &amp;x, ll &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!b)&#123;</span><br><span class="line">        x = <span class="number">1</span>, y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    ll d = exgcd(b, a % b, x, y);</span><br><span class="line">    ll t = x;</span><br><span class="line">    x = y, y = t - y * (a / b);</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ll a,b;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    exgcd(a, b, x, y);</span><br><span class="line">    ll ans = (x + b) % b;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>最小生成树</title>
     <url>/all/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</url>
     <content><![CDATA[<h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="Prim"><a href="#Prim" class="headerlink" title="Prim"></a>Prim</h3><h3 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h3><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h3 id="走廊泼水节"><a href="#走廊泼水节" class="headerlink" title="走廊泼水节"></a>走廊泼水节</h3><p><a href="https://ac.nowcoder.com/acm/contest/1056/A" target="_blank" rel="noopener">https://ac.nowcoder.com/acm/contest/1056/A</a> </p>
@@ -301,11 +327,6 @@
     <title>数论模板</title>
     <url>/all/%E6%95%B0%E8%AE%BA%E6%A8%A1%E6%9D%BF/</url>
     <content><![CDATA[<h1 id="数论模板"><a href="#数论模板" class="headerlink" title="数论模板"></a>数论模板</h1>]]></content>
-  </entry>
-  <entry>
-    <title>图论模板</title>
-    <url>/all/%E5%9B%BE%E8%AE%BA%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<h1 id="图论模板"><a href="#图论模板" class="headerlink" title="图论模板"></a>图论模板</h1>]]></content>
   </entry>
   <entry>
     <title>动态规划模板</title>
