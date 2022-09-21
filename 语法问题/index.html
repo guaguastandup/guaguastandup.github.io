@@ -227,37 +227,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>一些C++的语法问题</p>
-<span id="more"></span>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/blog/entry/15643">https://codeforces.com/blog/entry/15643</a></p>
-<h2 id="scanf"><a href="#scanf" class="headerlink" title="scanf"></a>scanf</h2><p><code>scanf(&quot;%c&quot;,&amp;c);</code> 可以输入换行符<br><code>scanf(&quot;%s&quot;,s+1);</code> 不会读取换行符</p>
+        <p>一些C++的语法问题 <span id="more"></span>
+https://codeforces.com/blog/entry/15643</p>
+<h2 id="scanf">scanf</h2>
+<p><code>scanf("%c",&amp;c);</code> 可以输入换行符
+<code>scanf("%s",s+1);</code> 不会读取换行符</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; p;</span><br><span class="line">p = &#123;<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;v;</span><br><span class="line">v = &#123;<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tuple&lt;<span class="type">int</span>,<span class="type">int</span>,<span class="type">int</span>&gt; t;</span><br><span class="line">t = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="type">int</span> x =  <span class="built_in">get</span>&lt;<span class="number">1</span>&gt;(t);</span><br><span class="line">cout&lt;&lt;x&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="builtin"><a href="#builtin" class="headerlink" title="builtin"></a>builtin</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = __builtin_ffs(<span class="number">16</span>);<span class="comment">//返回最低位1的位置</span></span><br><span class="line"><span class="type">int</span> y = __builtin_ctz(<span class="number">16</span>);<span class="comment">//返回尾0的个数</span></span><br><span class="line"><span class="type">int</span> z = __builtin_popcount(x);<span class="comment">//返回1的个数</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    <span class="keyword">for</span>(j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">        cout &lt;&lt; a[i][j] &lt;&lt; <span class="string">&quot; \n&quot;</span>[j == m];</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="pow"><a href="#pow" class="headerlink" title="pow"></a>pow</h3><p>今天long long范围内调用了pow函数,然后WA了</p>
+<h2 id="tuple">tuple</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tuple&lt;<span class="type">int</span>,<span class="type">int</span>,<span class="type">int</span>&gt; t;</span><br><span class="line">t = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="type">int</span> x =  <span class="built_in">get</span>&lt;<span class="number">1</span>&gt;(t);</span><br><span class="line">cout&lt;&lt;x&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+<h3 id="builtin">builtin</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = __builtin_ffs(<span class="number">16</span>);<span class="comment">//返回最低位1的位置</span></span><br><span class="line"><span class="type">int</span> y = __builtin_ctz(<span class="number">16</span>);<span class="comment">//返回尾0的个数</span></span><br><span class="line"><span class="type">int</span> z = __builtin_popcount(x);<span class="comment">//返回1的个数</span></span><br></pre></td></tr></table></figure>
+<h3 id="output">Output</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    <span class="keyword">for</span>(j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">        cout &lt;&lt; a[i][j] &lt;&lt; <span class="string">&quot; \n&quot;</span>[j == m];</span><br></pre></td></tr></table></figure>
+<h3 id="pow">pow</h3>
+<p>今天long long范围内调用了pow函数,然后WA了</p>
 <p>改成这样就过了,待解决</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ll <span class="title">p</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">    ll ans = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=b;i==)&#123;</span><br><span class="line">        ans*=a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="vector-lt-vector-gt"><a href="#vector-lt-vector-gt" class="headerlink" title="vector&lt;vector&gt;"></a>vector&lt;vector<int>&gt;</int></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">pre</span>(m, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n + <span class="number">1</span>));</span><br></pre></td></tr></table></figure>
-
-<p>相当于开了一个<code>int pre[m][n+1]</code>的数组,但是不会MLE($\sum n \leq {10}^5$)</p>
+<h3 id="vectorvector">vector&lt;vector<int>&gt;</int></h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">pre</span>(m, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n + <span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+<p>相当于开了一个<code>int pre[m][n+1]</code>的数组,但是不会MLE(<span class="math inline">\(\sum n \leq {10}^5\)</span>)</p>
 <p>反正是动态的</p>
 
     </div>
@@ -274,8 +262,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/%E9%A9%AC%E6%8B%89%E8%BD%A6/" rel="prev" title="Manacher">
-      <i class="fa fa-chevron-left"></i> Manacher
+    <a href="/%E9%93%BE%E8%A1%A8/" rel="prev" title="链表">
+      <i class="fa fa-chevron-left"></i> 链表
     </a></div>
       <div class="post-nav-item">
     <a href="/%E7%BB%84%E5%90%88%E6%95%B0/" rel="next" title="组合数">
@@ -339,7 +327,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#scanf"><span class="nav-number">1.</span> <span class="nav-text">scanf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tuple"><span class="nav-number">2.</span> <span class="nav-text">tuple</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#builtin"><span class="nav-number">2.1.</span> <span class="nav-text">builtin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output"><span class="nav-number">2.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pow"><span class="nav-number">2.3.</span> <span class="nav-text">pow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector-lt-vector-gt"><span class="nav-number">2.4.</span> <span class="nav-text">vector&lt;vector&gt;</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#scanf"><span class="nav-number">1.</span> <span class="nav-text">scanf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tuple"><span class="nav-number">2.</span> <span class="nav-text">tuple</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#builtin"><span class="nav-number">2.1.</span> <span class="nav-text">builtin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#output"><span class="nav-number">2.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pow"><span class="nav-number">2.3.</span> <span class="nav-text">pow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vectorvector"><span class="nav-number">2.4.</span> <span class="nav-text">vector&lt;vector&gt;</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -362,13 +350,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
