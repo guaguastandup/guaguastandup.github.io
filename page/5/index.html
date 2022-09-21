@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/2022/09/10/unique_ptr/">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/unique_ptr/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/pic.JPG">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/10/unique_ptr/" class="post-title-link" itemprop="url">关于unique_ptr的实验</a>
+            <a href="/unique_ptr/" class="post-title-link" itemprop="url">关于unique_ptr的实验</a>
         </h2>
 
         <div class="post-meta">
@@ -227,7 +227,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::unique_ptr&lt;<span class="type">int</span>&gt; up,up1;</span><br><span class="line">    up = std::<span class="built_in">unique_ptr</span>&lt;<span class="type">int</span>&gt;(<span class="keyword">new</span> <span class="built_in">int</span>(<span class="number">20</span>));</span><br><span class="line">    up1 = std::<span class="built_in">unique_ptr</span>&lt;<span class="type">int</span>&gt;(std::<span class="built_in">move</span>(up));</span><br><span class="line"></span><br><span class="line">    std::cout&lt;&lt;*up1&lt;&lt;std::endl; <span class="comment">//结果：20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/10/unique_ptr/#more" rel="contents">
+              <a class="btn" href="/unique_ptr/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -251,7 +251,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/2022/09/09/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/pic.JPG">
@@ -265,7 +265,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/09/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/" class="post-title-link" itemprop="url">子集枚举(SOS)</a>
+            <a href="/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/" class="post-title-link" itemprop="url">子集枚举(SOS)</a>
         </h2>
 
         <div class="post-meta">
@@ -309,7 +309,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//iterative version</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> mask = <span class="number">0</span>; mask &lt; (<span class="number">1</span>&lt;&lt;N); ++mask) &#123;</span><br><span class="line">	dp[mask][<span class="number">-1</span>] = A[mask];	</span><br><span class="line">    <span class="comment">//handle base case separately (leaf states)</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; N; ++i)&#123;</span><br><span class="line">		<span class="keyword">if</span>(mask &amp; (<span class="number">1</span>&lt;&lt;i))</span><br><span class="line">			dp[mask][i] = dp[mask][i<span class="number">-1</span>] + dp[mask^(<span class="number">1</span>&lt;&lt;i)][i<span class="number">-1</span>];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			dp[mask][i] = dp[mask][i<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	F[mask] = dp[mask][N<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//memory optimized, super easy to code.</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;(<span class="number">1</span>&lt;&lt;N); ++i)</span><br><span class="line">	F[i] = A[i];</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; N; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> mask = <span class="number">0</span>; mask &lt; (<span class="number">1</span>&lt;&lt;N); ++mask)&#123;</span><br><span class="line">        <span class="keyword">if</span>(mask &amp; (<span class="number">1</span>&lt;&lt;i))</span><br><span class="line">            F[mask] += F[mask^(<span class="number">1</span>&lt;&lt;i)];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/09/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/#more" rel="contents">
+              <a class="btn" href="/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -333,7 +333,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/2022/09/01/hexo/">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/pic.JPG">
@@ -347,7 +347,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/01/hexo/" class="post-title-link" itemprop="url">Hello, Hexo</a>
+            <a href="/hexo/" class="post-title-link" itemprop="url">Hello, Hexo</a>
         </h2>
 
         <div class="post-meta">
@@ -388,7 +388,7 @@ more info.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/01/hexo/#more" rel="contents">
+              <a class="btn" href="/hexo/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
