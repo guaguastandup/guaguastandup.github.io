@@ -240,8 +240,7 @@
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">pof2:</span>	<span class="meta">.word</span> <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">la		$<span class="built_in">a0</span>,pof2</span><br><span class="line"><span class="keyword">lw	</span>	$<span class="built_in">s0</span>,<span class="number">8</span>($<span class="built_in">a0</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lui	</span>	$<span class="built_in">s1</span>,<span class="number">0x1234</span></span><br><span class="line"><span class="keyword">ori	</span>	$<span class="built_in">s1</span>,$<span class="built_in">s1</span></span><br><span class="line"><span class="keyword">addi	</span>        $<span class="built_in">t0</span>,$<span class="number">0</span>,<span class="number">100</span></span><br><span class="line"><span class="keyword">sw	</span>	$<span class="built_in">t0</span>,<span class="number">0</span>($<span class="built_in">s1</span>)</span><br></pre></td></tr></table></figure>
-<p>立即数寻址/寄存器寻址{addi/add <span
-class="math inline">\(s0,\)</span>s1,5/$s2}</p>
+<p>立即数寻址/寄存器寻址{addi/add <span class="math inline">\(s0,\)</span>s1,5/$s2}</p>
 <h1 id="赋值">赋值</h1>
 <p>全局/static变量:</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	<span class="meta">.data</span></span><br><span class="line">i	<span class="meta">.word</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
@@ -306,8 +305,8 @@ ATTENTION:最高位进位不一定溢出，两个负数相加一定进位但不�
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/09/15/java/" rel="prev" title="Java">
-      <i class="fa fa-chevron-left"></i> Java
+    <a href="/2022/09/15/Tire/" rel="prev" title="Tire字典树">
+      <i class="fa fa-chevron-left"></i> Tire字典树
     </a></div>
       <div class="post-nav-item">
     <a href="/2022/09/15/Hash/" rel="next" title="Hash">
