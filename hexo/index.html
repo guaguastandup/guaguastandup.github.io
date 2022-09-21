@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"guaguastandup.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info.  Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  shortcut1$ hexo clean &amp;&amp; hexo g &amp;&amp; h">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. Quick Start Create a new post 1$ hexo new &quot;My New Post&quot; shortcut 1$ hexo clean &amp;&amp; hexo g &amp;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello, Hexo">
 <meta property="og:url" content="https://guaguastandup.github.io/hexo/index.html">
 <meta property="og:site_name" content="瓜瓜站起来">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info.  Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  shortcut1$ hexo clean &amp;&amp; hexo g &amp;&amp; h">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. Quick Start Create a new post 1$ hexo new &quot;My New Post&quot; shortcut 1$ hexo clean &amp;&amp; hexo g &amp;&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-01T03:57:00.000Z">
 <meta property="article:modified_time" content="2022-09-21T02:10:51.629Z">
@@ -214,22 +214,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. </p>
-<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="shortcut"><a href="#shortcut" class="headerlink" title="shortcut"></a>shortcut</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
+more info.</p>
+<h1 id="quick-start">Quick Start</h1>
+<h2 id="create-a-new-post">Create a new post</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="shortcut">shortcut</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a><br>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a><br>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h2 id="next主题样式"><a href="#next主题样式" class="headerlink" title="next主题样式"></a>next主题样式</h2><h3 id="修改行间距"><a href="#修改行间距" class="headerlink" title="修改行间距"></a>修改行间距</h3><p><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/issues/1703">https://github.com/theme-next/hexo-theme-next/issues/1703</a></p>
-<h2 id="开启mathJax"><a href="#开启mathJax" class="headerlink" title="开启mathJax"></a>开启mathJax</h2><h2 id="部署到github-io页面"><a href="#部署到github-io页面" class="headerlink" title="部署到github.io页面"></a>部署到github.io页面</h2><p>创建名为guaguastandup.github.io的空仓库，然后在hexo&#x2F;_config.yml中设置：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:guaguastandup/guaguastandup.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>vscode: 插件paste image</p>
-<ul>
-<li>配置路径，将图片路径设置在${currentFileDir}&#x2F;${currentFileNameWithoutExt}中</li>
-<li>快捷键：command + option + V</li>
-</ul>
-<p>安装hexo-asset-image<br>执行<code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code></p>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a>
+More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a>
+More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="next主题样式">next主题样式</h2>
+<h3 id="修改行间距">修改行间距</h3>
+<p>https://github.com/theme-next/hexo-theme-next/issues/1703</p>
+<h2 id="开启mathjax">开启mathJax</h2>
+<h2 id="部署到github.io页面">部署到github.io页面</h2>
+<p>创建名为guaguastandup.github.io的空仓库，然后在hexo/_config.yml中设置：
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:guaguastandup/guaguastandup.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="插入图片">插入图片</h2>
+<p>vscode: 插件paste image - 配置路径，将图片路径设置在<span
+class="math inline">\({currentFileDir}/\)</span>{currentFileNameWithoutExt}中
+- 快捷键：command + option + V</p>
+<p>安装hexo-asset-image
+执行<code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code></p>
 
     </div>
 
@@ -307,7 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shortcut"><span class="nav-number">1.2.</span> <span class="nav-text">shortcut</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">next主题样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%A1%8C%E9%97%B4%E8%B7%9D"><span class="nav-number">1.3.1.</span> <span class="nav-text">修改行间距</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AFmathJax"><span class="nav-number">1.4.</span> <span class="nav-text">开启mathJax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0github-io%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.5.</span> <span class="nav-text">部署到github.io页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="nav-number">1.6.</span> <span class="nav-text">插入图片</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#quick-start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shortcut"><span class="nav-number">1.2.</span> <span class="nav-text">shortcut</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">next主题样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%A1%8C%E9%97%B4%E8%B7%9D"><span class="nav-number">1.3.1.</span> <span class="nav-text">修改行间距</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AFmathjax"><span class="nav-number">1.4.</span> <span class="nav-text">开启mathJax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0github.io%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.5.</span> <span class="nav-text">部署到github.io页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="nav-number">1.6.</span> <span class="nav-text">插入图片</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
