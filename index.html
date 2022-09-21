@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/test/test/">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/a/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/pic.JPG">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/test/test/" class="post-title-link" itemprop="url">Hello, Hexo</a>
+            <a href="/a/test/" class="post-title-link" itemprop="url">Hello, Hexo</a>
         </h2>
 
         <div class="post-meta">
@@ -196,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-21 11:23:09" itemprop="dateModified" datetime="2022-09-21T11:23:09+08:00">2022-09-21</time>
+                <time title="修改时间：2022-09-21 11:25:02" itemprop="dateModified" datetime="2022-09-21T11:25:02+08:00">2022-09-21</time>
               </span>
 
           
@@ -211,8 +211,8 @@
 
       
           <p><img src="myimg/test/2022-09-21-11-13-46.png" /></p>
-<p>http://localhost:4000/test/test/test/2022-09-21-11-13-46.png</p>
-<img src="/test/test/2022-09-21-11-13-46.png" class="">
+<img src="/a/test/2022-09-21-11-13-46.png" class="">
+<p>http://localhost:4000/test/test/myimg/test/2022-09-21-11-13-46.png</p>
 <p>http://localhost:4000/test/test/2022-09-21-11-13-46.png</p>
 
       
@@ -305,6 +305,79 @@ x)实现的功能是：单点更新、区间查询</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E4%B8%8E%E7%BA%BF%E6%AE%B5%E6%A0%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/Hash/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Hash/" class="post-title-link" itemprop="url">Hash</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-20 16:06:36" itemprop="dateModified" datetime="2022-09-20T16:06:36+08:00">2022-09-20</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="模板">模板</h1>
+<p>http://xlorpaste.cn/y0xia1 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Hash</span>() &#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> SEED = <span class="number">13331</span>;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> p[maxn], f[maxn], ff[maxn];</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Hash</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        n = s.<span class="built_in">size</span>();</span><br><span class="line">        f[<span class="number">0</span>] = s[<span class="number">0</span>] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>;</span><br><span class="line">        p[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            f[i] = (f[i - <span class="number">1</span>] * SEED % mod + (s[i] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>)) % mod;</span><br><span class="line">            p[i] = p[i - <span class="number">1</span>] * SEED % mod;</span><br><span class="line">        &#125;</span><br><span class="line">        ff[n - <span class="number">1</span>] = s[n - <span class="number">1</span>] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = n - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            ff[i] = (ff[i + <span class="number">1</span>] * SEED % mod + (s[i] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>)) % mod;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">h</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> f[r];</span><br><span class="line">        <span class="keyword">return</span> (f[r] - f[l - <span class="number">1</span>] * p[r - l + <span class="number">1</span>] % mod + mod) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">hh</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (r == n - <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> ff[l];</span><br><span class="line">        <span class="keyword">return</span> (ff[l] - ff[r + <span class="number">1</span>] * p[r - l + <span class="number">1</span>] % mod + mod) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Hash/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -471,79 +544,6 @@ x)实现的功能是：单点更新、区间查询</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/MIPS/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/Hash/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/pic.JPG">
-      <meta itemprop="name" content="Gua">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瓜瓜站起来">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Hash/" class="post-title-link" itemprop="url">Hash</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-20 16:06:36" itemprop="dateModified" datetime="2022-09-20T16:06:36+08:00">2022-09-20</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="模板">模板</h1>
-<p>http://xlorpaste.cn/y0xia1 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Hash</span>() &#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> SEED = <span class="number">13331</span>;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> p[maxn], f[maxn], ff[maxn];</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Hash</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        n = s.<span class="built_in">size</span>();</span><br><span class="line">        f[<span class="number">0</span>] = s[<span class="number">0</span>] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>;</span><br><span class="line">        p[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            f[i] = (f[i - <span class="number">1</span>] * SEED % mod + (s[i] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>)) % mod;</span><br><span class="line">            p[i] = p[i - <span class="number">1</span>] * SEED % mod;</span><br><span class="line">        &#125;</span><br><span class="line">        ff[n - <span class="number">1</span>] = s[n - <span class="number">1</span>] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = n - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            ff[i] = (ff[i + <span class="number">1</span>] * SEED % mod + (s[i] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>)) % mod;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">h</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> f[r];</span><br><span class="line">        <span class="keyword">return</span> (f[r] - f[l - <span class="number">1</span>] * p[r - l + <span class="number">1</span>] % mod + mod) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">hh</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (r == n - <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> ff[l];</span><br><span class="line">        <span class="keyword">return</span> (ff[l] - ff[r + <span class="number">1</span>] * p[r - l + <span class="number">1</span>] % mod + mod) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Hash/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
