@@ -165,6 +165,174 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E8%AF%AD%E8%A8%80/unique_ptr/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E8%AF%AD%E8%A8%80/unique_ptr/" class="post-title-link" itemprop="url">关于unique_ptr的实验</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-10 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-10T11:57:00+08:00">2022-09-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-20 16:05:03" itemprop="dateModified" datetime="2022-09-20T16:05:03+08:00">2022-09-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">语言</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%AD%E8%A8%80/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="code">code</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::unique_ptr&lt;<span class="type">int</span>&gt; up,up1;</span><br><span class="line">    up = std::<span class="built_in">unique_ptr</span>&lt;<span class="type">int</span>&gt;(<span class="keyword">new</span> <span class="built_in">int</span>(<span class="number">20</span>));</span><br><span class="line">    up1 = std::<span class="built_in">unique_ptr</span>&lt;<span class="type">int</span>&gt;(std::<span class="built_in">move</span>(up));</span><br><span class="line"></span><br><span class="line">    std::cout&lt;&lt;*up1&lt;&lt;std::endl; <span class="comment">//结果：20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E8%AF%AD%E8%A8%80/unique_ptr/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E8%AF%AD%E8%A8%80/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E8%AF%AD%E8%A8%80/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/" class="post-title-link" itemprop="url">子集枚举(SOS)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-09 11:35:51" itemprop="dateCreated datePublished" datetime="2022-09-09T11:35:51+08:00">2022-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-20 16:07:54" itemprop="dateModified" datetime="2022-09-20T16:07:54+08:00">2022-09-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="code">code</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//iterative version</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> mask = <span class="number">0</span>; mask &lt; (<span class="number">1</span>&lt;&lt;N); ++mask) &#123;</span><br><span class="line">	dp[mask][<span class="number">-1</span>] = A[mask];	</span><br><span class="line">    <span class="comment">//handle base case separately (leaf states)</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; N; ++i)&#123;</span><br><span class="line">		<span class="keyword">if</span>(mask &amp; (<span class="number">1</span>&lt;&lt;i))</span><br><span class="line">			dp[mask][i] = dp[mask][i<span class="number">-1</span>] + dp[mask^(<span class="number">1</span>&lt;&lt;i)][i<span class="number">-1</span>];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			dp[mask][i] = dp[mask][i<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	F[mask] = dp[mask][N<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//memory optimized, super easy to code.</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;(<span class="number">1</span>&lt;&lt;N); ++i)</span><br><span class="line">	F[i] = A[i];</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; N; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> mask = <span class="number">0</span>; mask &lt; (<span class="number">1</span>&lt;&lt;N); ++mask)&#123;</span><br><span class="line">        <span class="keyword">if</span>(mask &amp; (<span class="number">1</span>&lt;&lt;i))</span><br><span class="line">            F[mask] += F[mask^(<span class="number">1</span>&lt;&lt;i)];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E8%AF%AD%E8%A8%80/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/tools/hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -226,6 +394,177 @@ more info.</p>
             </div>
           <!--/noindex-->
         
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E4%BD%9C%E4%B8%9A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%BD%9C%E4%B8%9A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E4%BD%9C%E4%B8%9A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%BD%9C%E4%B8%9A2/" class="post-title-link" itemprop="url">计算机系统作业二</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-16 11:57:00" itemprop="dateCreated datePublished" datetime="2021-09-16T11:57:00+08:00">2021-09-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-13 21:56:58" itemprop="dateModified" datetime="2022-10-13T21:56:58+08:00">2022-10-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index"><span itemprop="name">作业</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="section">3.58</h1>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># x %rdi</span><br><span class="line"># y %rsi</span><br><span class="line"># z %rdx</span><br><span class="line"></span><br><span class="line">long decode2(long x, long y, long z)</span><br><span class="line"><span class="symbol">decode2:</span></span><br><span class="line">    subq    %rdx, %rsi # y = %rsi = y - z<span class="comment">;</span></span><br><span class="line">    imulq   %rsi, %rdi # x = %rdi = y * x<span class="comment">;</span></span><br><span class="line">    <span class="keyword">movq</span>    %rsi, %rax # %rax = y<span class="comment">;</span></span><br><span class="line">    salq    <span class="number">$63</span>, %rax  # %rax = %rax &lt;&lt; <span class="number">63</span><span class="comment">;</span></span><br><span class="line">    sarq    <span class="number">$63</span>, %rax  # %rax = %rax &gt;&gt; <span class="number">63</span><span class="comment">;</span></span><br><span class="line">    xorq    %rdi, %rax # %rax = %rax ^ x<span class="comment">;</span></span><br><span class="line">    <span class="keyword">ret</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="title function_">decode2</span><span class="params">(<span class="type">long</span> x, <span class="type">long</span> y, <span class="type">long</span> z)</span> &#123;</span><br><span class="line">    <span class="type">long</span> k = y -z;</span><br><span class="line">    x = k * x;</span><br><span class="line">    <span class="keyword">return</span> (x)^((k&lt;&lt;<span class="number">63</span>)&gt;&gt;<span class="number">63</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="section-1">3.60</h1>
+<p>long loop(long x, int n) x in %rdi, n in %esi</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">loop:</span></span><br><span class="line">    movl    %esi, %ecx  # <span class="built_in">ecx</span> = <span class="built_in">esi</span> = n</span><br><span class="line">    movl    <span class="number">$1</span>, %edx    # <span class="built_in">edx</span> = <span class="number">1</span></span><br><span class="line">    movl    <span class="number">$0</span>, %eax    # <span class="built_in">eax</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">jmp</span>     .L2</span><br><span class="line"><span class="symbol">.L3:</span></span><br><span class="line">    <span class="keyword">movq</span>    %rdi, %r8   # <span class="built_in">r8</span> = <span class="built_in">rdi</span> = x</span><br><span class="line">    andq    %rdx, %r8   # <span class="built_in">r8</span> = <span class="built_in">r8</span> + <span class="built_in">rdx</span></span><br><span class="line">    orq     %r8, %rax   # <span class="built_in">r8</span> = <span class="built_in">rax</span> | <span class="built_in">r8</span></span><br><span class="line">    salq    %cl, %rdx   # </span><br><span class="line"><span class="symbol">.L2:</span></span><br><span class="line">    testq   %rdx, %rdx</span><br><span class="line">    <span class="keyword">jne</span>     .L3</span><br><span class="line">    req<span class="comment">; ret</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// result %rax</span></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="title">loop</span><span class="params">(<span class="type">long</span> x, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="type">long</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="type">long</span> mask;</span><br><span class="line">    <span class="keyword">for</span>(mask = <span class="number">1</span>;mask != <span class="number">0</span>; mask = mask &lt;&lt; n  ) &#123;</span><br><span class="line">        result |= (x &amp; mask);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="section-2">3.63</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">long</span> <span class="title">switch_prob</span><span class="params">(<span class="type">long</span> x, <span class="type">long</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="type">long</span> result = x;</span><br><span class="line">    <span class="keyword">switch</span>(n) &#123;</span><br><span class="line">        <span class="keyword">switch</span>(n) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">60</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="number">62</span>:</span><br><span class="line">                result = <span class="number">8</span>*x;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">63</span>:</span><br><span class="line">                resuct = x&gt;&gt;<span class="number">3</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">64</span>:</span><br><span class="line">                result = (x&lt;&lt;<span class="number">4</span>) - x;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">65</span>:</span><br><span class="line">                result = x * x;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                result = x + <span class="number">0x4B</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="section-3">3.69</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">    <span class="type">int</span> first;</span><br><span class="line">    a_struct a[CNT];</span><br><span class="line">    <span class="type">int</span> last;</span><br><span class="line">&#125; b_struct;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test</span><span class="params">(<span class="type">long</span> i, b_struct *bp)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n = bp-&gt;first + bp-&gt;last;</span><br><span class="line">    a_struct *ap = &amp;bp-&gt;a[i];</span><br><span class="line">    ap-&gt;x[ap-&gt;idx] = n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>CNT的值为:<br>
+# 3.70</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E4%BD%9C%E4%B8%9A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%BD%9C%E4%B8%9A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E4%BD%9C%E4%B8%9A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%BD%9C%E4%B8%9A1/" class="post-title-link" itemprop="url">计算机系统作业一</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2021-09-15T11:57:00+08:00">2021-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-13 11:44:31" itemprop="dateModified" datetime="2022-10-13T11:44:31+08:00">2022-10-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index"><span itemprop="name">作业</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="section">2.58</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">char</span>* byte_pointer;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">is_little_endian</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 输出: 无论机器字长, 小端机器输出1, 大端机器输出0</span></span><br><span class="line">    <span class="type">int</span> num = <span class="number">0x1f</span>;</span><br><span class="line">    byte_pointer temp = (byte_pointer) &amp; num;</span><br><span class="line">    <span class="keyword">return</span> temp[<span class="number">0</span>] == <span class="number">0x1f</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">is_little_endian</span>()&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="section-1">2.61</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A. 任何位都等于<span class="number">1</span></span><br><span class="line">!~x</span><br><span class="line">B. 任何位都等于<span class="number">0</span></span><br><span class="line">!x</span><br><span class="line">C. x的最低有效字节中的位都等于<span class="number">1</span></span><br><span class="line">!~(x|~<span class="number">0xff</span>)</span><br><span class="line">D. x的最高有效字节中的位都等于<span class="number">0</span></span><br><span class="line">!(x&gt;&gt;(<span class="built_in">sizeof</span>(<span class="type">int</span>)<span class="number">-1</span>&lt;&lt;<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="section-2">2.77</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">K=<span class="number">17</span>    x=(x&lt;&lt;<span class="number">4</span>)+x</span><br><span class="line">K=<span class="number">-7</span>    x=x-(x&lt;&lt;<span class="number">3</span>)</span><br><span class="line">K=<span class="number">60</span>    x=(x&lt;&lt;<span class="number">6</span>)-(x&lt;&lt;<span class="number">2</span>)</span><br><span class="line">K=<span class="number">-112</span>  x=(x&lt;&lt;<span class="number">4</span>)-(x&lt;&lt;<span class="number">7</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="section-3">2.84</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="title">f2u</span><span class="params">(<span class="type">float</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> *(<span class="type">unsigned</span> *)&amp;x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">float_le</span><span class="params">(<span class="type">float</span> x, <span class="type">float</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="type">unsigned</span> ux = <span class="built_in">f2u</span>(x);</span><br><span class="line">    <span class="type">unsigned</span> uy = <span class="built_in">f2u</span>(y);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Get the sign bits */</span></span><br><span class="line">    <span class="type">unsigned</span> sx = ux &gt;&gt; <span class="number">31</span>;</span><br><span class="line">    <span class="type">unsigned</span> sy = uy &gt;&gt; <span class="number">31</span>;</span><br><span class="line">    <span class="comment">/* Give an expression using only ux, uy, sx, and sy */</span></span><br><span class="line">    <span class="keyword">return</span> sx == sy ? (sx == <span class="number">0</span> ? ux &lt;= uy : ux &gt;= uy) : sx &gt; sy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="section-4">2.89</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">A</span><span class="params">(<span class="type">int</span> x, <span class="type">double</span> dx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="type">float</span>)x == (<span class="type">float</span>)dx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">B</span><span class="params">(<span class="type">int</span> x, <span class="type">double</span> dx, <span class="type">int</span> y, <span class="type">double</span> dy)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> dx-dy == (<span class="type">double</span>)(x-y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">C</span><span class="params">(<span class="type">double</span> dx, <span class="type">double</span> dy, <span class="type">double</span> dz)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (dx+dy)+dz == dx+(dy+dz);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">D</span><span class="params">(<span class="type">double</span> dx, <span class="type">double</span> dy, <span class="type">double</span> dz)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (dx*dy)*dz == dx*(dy*dz);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">E</span><span class="params">(<span class="type">double</span> dx, <span class="type">double</span> dz)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> dx/dx == dz/dz;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">double_int</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">/* Create some arbitrary values */</span></span><br><span class="line">    <span class="type">int</span> x = <span class="built_in">random</span>();</span><br><span class="line">    <span class="type">int</span> y = <span class="built_in">random</span>();</span><br><span class="line">    <span class="type">int</span> z = <span class="built_in">random</span>();</span><br><span class="line">    <span class="comment">/* Convert to double */</span></span><br><span class="line">    <span class="type">double</span> dx = (<span class="type">double</span>)x;</span><br><span class="line">    <span class="type">double</span> dy = (<span class="type">double</span>)y;</span><br><span class="line">    <span class="type">double</span> dz = (<span class="type">double</span>)z;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// answer</span></span><br><span class="line">    <span class="comment">// A.总是为1</span></span><br><span class="line">    <span class="built_in">assert</span>(<span class="built_in">A</span>(x, dx));</span><br><span class="line">    <span class="comment">// B.不总是为1</span></span><br><span class="line">    <span class="built_in">assert</span>(!<span class="built_in">B</span>(<span class="number">0</span>, (<span class="type">double</span>)(<span class="type">int</span>)<span class="number">0</span>, INT_MIN, (<span class="type">double</span>)(<span class="type">int</span>)INT_MIN));</span><br><span class="line">    <span class="comment">// C.总是为1</span></span><br><span class="line">    <span class="built_in">assert</span>(<span class="built_in">C</span>(dx, dy, dz));</span><br><span class="line">    <span class="comment">// D.不总是为1</span></span><br><span class="line">    <span class="built_in">assert</span>(!<span class="built_in">D</span>((<span class="type">double</span>)(<span class="type">int</span>)<span class="number">0x78901234</span>, (<span class="type">double</span>)(<span class="type">int</span>)<span class="number">0xd1234567</span>, (<span class="type">double</span>)(<span class="type">int</span>)<span class="number">0xd2345678</span>));</span><br><span class="line">    <span class="comment">// E.不总是为1</span></span><br><span class="line">    <span class="built_in">assert</span>(!<span class="built_in">E</span>(dx, (<span class="type">double</span>)(<span class="type">int</span>)<span class="number">0</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">while</span>(x--) &#123;</span><br><span class="line">        <span class="built_in">double_int</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="section-5">2.91</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">A. <span class="number">0x40490FDB</span> </span><br><span class="line">= <span class="number">0b</span> <span class="number">0100</span> <span class="number">0000</span> <span class="number">0100</span> <span class="number">1001</span> <span class="number">0000</span> <span class="number">1111</span> <span class="number">1101</span> <span class="number">1011</span> </span><br><span class="line">= <span class="number">0</span> <span class="number">10000000</span> <span class="number">10010010000111111011011</span></span><br><span class="line"></span><br><span class="line">B. <span class="number">22</span>/<span class="number">7</span>的二进制小数</span><br><span class="line">y = <span class="number">1</span>, k = <span class="number">3</span></span><br><span class="line"><span class="number">22</span>/<span class="number">7</span> = <span class="number">3.142857142857</span>... = <span class="number">11.001001</span>(<span class="number">001</span>)</span><br><span class="line"></span><br><span class="line">C. <span class="number">223</span>/<span class="number">71</span> 和 <span class="number">22</span>/<span class="number">7</span></span><br><span class="line"><span class="number">223</span>/<span class="number">71</span> = <span class="number">11.00100100000001</span>....</span><br><span class="line"><span class="number">22</span>/<span class="number">7</span> = <span class="number">11.001001001</span>...</span><br><span class="line">第<span class="number">9</span>位不同</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -311,14 +650,14 @@ more info.</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
