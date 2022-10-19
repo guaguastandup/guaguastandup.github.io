@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"guaguastandup.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="模板 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354struct SegTree &amp;#123;    #define lson l,mid,rt&lt;&lt;1    #define rson mid+1,r,rt&lt;&lt;1|1    l">
+  <meta name="description" content="磁盘 随机读取磁盘块的平均延迟： - 读取时间 &#x3D; 寻道时间 + 旋转延迟时间 + 传输时间 寻道时间 最小寻道时间指磁头寻道到相邻磁道的时间 旋转延迟时间 从磁盘寻道结束开始，直到磁头旋转到I&#x2F;O请求所请求的起始数据块位置止，这之间的时间间隔称为旋转延迟。  旋转延迟时间 &#x3D; 1&#x2F;(2*磁盘转速) 磁盘转速：单位RPM, r&#x2F;min  传输时间  传输时间 &#x3D; 读写字节数&#x2F;(磁盘转速 * 磁道字">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线段树">
-<meta property="og:url" content="https://guaguastandup.github.io/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/index.html">
+<meta property="og:title" content="高级数据库系统——课程笔记">
+<meta property="og:url" content="https://guaguastandup.github.io/%E5%AD%98%E5%82%A8/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="瓜瓜站起来">
-<meta property="og:description" content="模板 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354struct SegTree &amp;#123;    #define lson l,mid,rt&lt;&lt;1    #define rson mid+1,r,rt&lt;&lt;1|1    l">
+<meta property="og:description" content="磁盘 随机读取磁盘块的平均延迟： - 读取时间 &#x3D; 寻道时间 + 旋转延迟时间 + 传输时间 寻道时间 最小寻道时间指磁头寻道到相邻磁道的时间 旋转延迟时间 从磁盘寻道结束开始，直到磁头旋转到I&#x2F;O请求所请求的起始数据块位置止，这之间的时间间隔称为旋转延迟。  旋转延迟时间 &#x3D; 1&#x2F;(2*磁盘转速) 磁盘转速：单位RPM, r&#x2F;min  传输时间  传输时间 &#x3D; 读写字节数&#x2F;(磁盘转速 * 磁道字">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-15T03:57:00.000Z">
-<meta property="article:modified_time" content="2022-09-20T08:08:41.233Z">
+<meta property="article:published_time" content="2022-10-19T05:31:00.000Z">
+<meta property="article:modified_time" content="2022-10-19T05:37:09.467Z">
 <meta property="article:author" content="Gua">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://guaguastandup.github.io/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
+<link rel="canonical" href="https://guaguastandup.github.io/%E5%AD%98%E5%82%A8/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>线段树 | 瓜瓜站起来</title>
+  <title>高级数据库系统——课程笔记 | 瓜瓜站起来</title>
   
 
 
@@ -170,7 +170,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E5%AD%98%E5%82%A8/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/pic.JPG">
@@ -183,7 +183,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          线段树
+          高级数据库系统——课程笔记
         </h1>
 
         <div class="post-meta">
@@ -192,16 +192,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
+              <time title="创建时间：2022-10-19 13:31:00 / 修改时间：13:37:09" itemprop="dateCreated datePublished" datetime="2022-10-19T13:31:00+08:00">2022-10-19</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-20 16:08:41" itemprop="dateModified" datetime="2022-09-20T16:08:41+08:00">2022-09-20</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%98%E5%82%A8/" itemprop="url" rel="index"><span itemprop="name">存储</span></a>
+                </span>
+            </span>
 
           
 
@@ -214,9 +217,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="模板">模板</h1>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">SegTree</span> &#123;</span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> lson l,mid,rt&lt;&lt;1</span></span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> rson mid+1,r,rt&lt;&lt;1|1</span></span><br><span class="line">    ll a[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line">    <span class="type">int</span> tag[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pushup</span><span class="params">(<span class="type">int</span> rt)</span> </span>&#123;</span><br><span class="line">        a[rt] = <span class="built_in">min</span>(a[rt &lt;&lt; <span class="number">1</span>], a[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> rt,<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">        a[rt] += x;</span><br><span class="line">        tag[rt] += x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pushdown</span><span class="params">(<span class="type">int</span> rt)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!tag[rt])</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="built_in">push</span>(rt &lt;&lt; <span class="number">1</span>, tag[rt]);</span><br><span class="line">        <span class="built_in">push</span>(rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, tag[rt]);</span><br><span class="line">        tag[rt] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> l = <span class="number">1</span>,<span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l==r) &#123;</span><br><span class="line">            a[rt] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">build</span>(lson), <span class="built_in">build</span>(rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> x, <span class="type">int</span> l = <span class="number">1</span>, <span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R) &#123;</span><br><span class="line">            <span class="built_in">push</span>(rt, x);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">pushdown</span>(rt);</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=m)</span><br><span class="line">            <span class="built_in">update</span>(L, R, x, lson);</span><br><span class="line">        <span class="keyword">if</span>(R&gt;m)</span><br><span class="line">            <span class="built_in">update</span>(L, R, x, rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">ll <span class="title">query</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> l = <span class="number">1</span>, <span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R) &#123;</span><br><span class="line">            <span class="keyword">return</span> a[rt];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">pushdown</span>(rt);</span><br><span class="line">        <span class="keyword">if</span>(R&lt;=m)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">query</span>(L, R, lson);</span><br><span class="line">        <span class="keyword">if</span>(L&gt;m)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">query</span>(L, R, rson);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(<span class="built_in">query</span>(L, R, lson), <span class="built_in">query</span>(L, R, rson));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; f;</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
+        <h1 id="磁盘">磁盘</h1>
+<p>随机读取磁盘块的平均延迟： - <strong>读取时间 = 寻道时间 +
+旋转延迟时间 + 传输时间</strong></p>
+<h2 id="寻道时间">寻道时间</h2>
+<p>最小寻道时间指磁头寻道到<strong>相邻磁道</strong>的时间</p>
+<h2 id="旋转延迟时间">旋转延迟时间</h2>
+<p>从磁盘寻道结束开始，直到<strong>磁头旋转到I/O请求所请求的起始数据块位置</strong>止，这之间的时间间隔称为旋转延迟。</p>
+<ul>
+<li><strong>旋转延迟时间 = 1/(2*磁盘转速)</strong></li>
+<li>磁盘转速：单位RPM, r/min</li>
+</ul>
+<h2 id="传输时间">传输时间</h2>
+<ul>
+<li><strong>传输时间 = 读写字节数/(磁盘转速 * 磁道字节数)</strong></li>
+</ul>
 
     </div>
 
@@ -232,13 +247,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/%E6%95%B0%E5%AD%A6/%E6%89%A9%E5%B1%95GCD/" rel="prev" title="扩展GCD">
-      <i class="fa fa-chevron-left"></i> 扩展GCD
+    <a href="/%E4%BD%9C%E4%B8%9A/adbs-hw3/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
     </a></div>
-      <div class="post-nav-item">
-    <a href="/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87/" rel="next" title="概率">
-      概率 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -297,7 +309,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.</span> <span class="nav-text">模板</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A3%81%E7%9B%98"><span class="nav-number">1.</span> <span class="nav-text">磁盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E9%81%93%E6%97%B6%E9%97%B4"><span class="nav-number">1.1.</span> <span class="nav-text">寻道时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%8B%E8%BD%AC%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4"><span class="nav-number">1.2.</span> <span class="nav-text">旋转延迟时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E6%97%B6%E9%97%B4"><span class="nav-number">1.3.</span> <span class="nav-text">传输时间</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
