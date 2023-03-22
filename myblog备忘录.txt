@@ -1,0 +1,2 @@
+paste img + save : cmd + option + V
+deploy command: 'blog'

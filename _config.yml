@@ -14,7 +14,7 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://guaguastandup.github.io/
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -40,7 +40,9 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
+filter_image:
+  log: true
 relative_link: false
 future: true
 highlight:
@@ -102,4 +104,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  # repository: git@guaguastandup:guaguastandup/guaguastandup.github.io.git
+  repository: git@github.com:guaguastandup/guaguastandup.github.io.git
+  branch: main
+  # message: ${{ github.event.head_commit.message }}
+  # user: guaguastandup
