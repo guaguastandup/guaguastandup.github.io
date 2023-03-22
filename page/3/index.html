@@ -166,251 +166,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/pic.JPG">
-      <meta itemprop="name" content="Gua">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瓜瓜站起来">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/" class="post-title-link" itemprop="url">线段树</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-20 16:08:41" itemprop="dateModified" datetime="2022-09-20T16:08:41+08:00">2022-09-20</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="模板">模板</h1>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">SegTree</span> &#123;</span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> lson l,mid,rt&lt;&lt;1</span></span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> rson mid+1,r,rt&lt;&lt;1|1</span></span><br><span class="line">    ll a[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line">    <span class="type">int</span> tag[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pushup</span><span class="params">(<span class="type">int</span> rt)</span> </span>&#123;</span><br><span class="line">        a[rt] = <span class="built_in">min</span>(a[rt &lt;&lt; <span class="number">1</span>], a[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> rt,<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">        a[rt] += x;</span><br><span class="line">        tag[rt] += x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pushdown</span><span class="params">(<span class="type">int</span> rt)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!tag[rt])</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="built_in">push</span>(rt &lt;&lt; <span class="number">1</span>, tag[rt]);</span><br><span class="line">        <span class="built_in">push</span>(rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, tag[rt]);</span><br><span class="line">        tag[rt] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> l = <span class="number">1</span>,<span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l==r) &#123;</span><br><span class="line">            a[rt] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">build</span>(lson), <span class="built_in">build</span>(rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> x, <span class="type">int</span> l = <span class="number">1</span>, <span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R) &#123;</span><br><span class="line">            <span class="built_in">push</span>(rt, x);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">pushdown</span>(rt);</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=m)</span><br><span class="line">            <span class="built_in">update</span>(L, R, x, lson);</span><br><span class="line">        <span class="keyword">if</span>(R&gt;m)</span><br><span class="line">            <span class="built_in">update</span>(L, R, x, rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">ll <span class="title">query</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> l = <span class="number">1</span>, <span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R) &#123;</span><br><span class="line">            <span class="keyword">return</span> a[rt];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">pushdown</span>(rt);</span><br><span class="line">        <span class="keyword">if</span>(R&lt;=m)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">query</span>(L, R, lson);</span><br><span class="line">        <span class="keyword">if</span>(L&gt;m)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">query</span>(L, R, rson);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(<span class="built_in">query</span>(L, R, lson), <span class="built_in">query</span>(L, R, rson));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; f;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/pic.JPG">
-      <meta itemprop="name" content="Gua">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瓜瓜站起来">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">链表</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-20 16:09:29" itemprop="dateModified" datetime="2022-09-20T16:09:29+08:00">2022-09-20</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>https://leetcode.cn/problems/remove-nth-node-from-end-of-list/</p>
-<p>使用快慢指针，让nxt指针先向后移动N次</p>
-<p>这样nxt指针和pre指针之间的间隔则为N</p>
-<p>然后，nxt和pre同时向后移动，当nxt移动到链表的尾部，pre依然和它间隔为N，那么此时的pre就是链表的倒数第N个节点了</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">removeNthFromEnd</span><span class="params">(ListNode* head, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        ListNode* pre = head;</span><br><span class="line">        ListNode* nxt = head;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">            nxt = nxt-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(nxt == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(nxt!=<span class="literal">nullptr</span>) &#123;</span><br><span class="line">            nxt = nxt-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(nxt == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                cout&lt;&lt;pre-&gt;val&lt;&lt;endl;</span><br><span class="line">                pre-&gt;next = pre-&gt;next-&gt;next;</span><br><span class="line">                <span class="keyword">return</span> head;                </span><br><span class="line">            &#125;</span><br><span class="line">            pre = pre-&gt;next;</span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E7%A7%91%E7%A0%94/%E9%99%88%E5%87%AF%E7%9A%84%E6%8A%A5%E5%91%8A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/pic.JPG">
-      <meta itemprop="name" content="Gua">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瓜瓜站起来">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E7%A7%91%E7%A0%94/%E9%99%88%E5%87%AF%E7%9A%84%E6%8A%A5%E5%91%8A/" class="post-title-link" itemprop="url">Towards a High-Performance RDMA Networking for Datacenters 报告笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-20 16:10:03" itemprop="dateModified" datetime="2022-09-20T16:10:03+08:00">2022-09-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index"><span itemprop="name">科研</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%A7%91%E7%A0%94/%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index"><span itemprop="name">报告</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="background">background</h1>
-<ul>
-<li>traditional software-based TCP/IP stack
-<ul>
-<li>数据通过用户空间发送到远程device的用户空间。</li>
-<li>这个过程会经过若干次内存拷贝：应用缓存-&gt;kernel中的TCP协议栈缓存-&gt;驱动层-&gt;网卡缓存。</li>
-<li>多次内存拷贝需要CPU介入，处理时延大，&gt;10us。</li>
-<li>解决方案：RDMA、TOE等。</li>
-</ul></li>
-<li>hardware-based RDMA
-<ul>
-<li>from HPC to Ethernet-based datacenters</li></ul></li></ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E7%A7%91%E7%A0%94/%E9%99%88%E5%87%AF%E7%9A%84%E6%8A%A5%E5%91%8A/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E7%AE%97%E6%B3%95/Hash/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -565,78 +320,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/pic.JPG">
-      <meta itemprop="name" content="Gua">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瓜瓜站起来">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="post-title-link" itemprop="url">动态规划</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-20 16:09:48" itemprop="dateModified" datetime="2022-09-20T16:09:48+08:00">2022-09-20</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一些DP题目存档</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -686,6 +369,78 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="post-title-link" itemprop="url">动态规划</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-20 16:09:48" itemprop="dateModified" datetime="2022-09-20T16:09:48+08:00">2022-09-20</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一些DP题目存档</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -770,6 +525,154 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E7%AE%97%E6%B3%95/%E6%9C%80%E7%9F%AD%E8%B7%AF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E6%A0%91/%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E6%A0%91/%E6%A0%91/" class="post-title-link" itemprop="url">树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-20 16:09:20" itemprop="dateModified" datetime="2022-09-20T16:09:20+08:00">2022-09-20</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>基环树</li>
+<li>DFS树</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E6%A0%91/%E6%A0%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/" class="post-title-link" itemprop="url">线段树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-20 16:08:41" itemprop="dateModified" datetime="2022-09-20T16:08:41+08:00">2022-09-20</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="模板">模板</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">SegTree</span> &#123;</span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> lson l,mid,rt&lt;&lt;1</span></span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> rson mid+1,r,rt&lt;&lt;1|1</span></span><br><span class="line">    ll a[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line">    <span class="type">int</span> tag[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pushup</span><span class="params">(<span class="type">int</span> rt)</span> </span>&#123;</span><br><span class="line">        a[rt] = <span class="built_in">min</span>(a[rt &lt;&lt; <span class="number">1</span>], a[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> rt,<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">        a[rt] += x;</span><br><span class="line">        tag[rt] += x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pushdown</span><span class="params">(<span class="type">int</span> rt)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!tag[rt])</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="built_in">push</span>(rt &lt;&lt; <span class="number">1</span>, tag[rt]);</span><br><span class="line">        <span class="built_in">push</span>(rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, tag[rt]);</span><br><span class="line">        tag[rt] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> l = <span class="number">1</span>,<span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l==r) &#123;</span><br><span class="line">            a[rt] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">build</span>(lson), <span class="built_in">build</span>(rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> x, <span class="type">int</span> l = <span class="number">1</span>, <span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R) &#123;</span><br><span class="line">            <span class="built_in">push</span>(rt, x);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">pushdown</span>(rt);</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=m)</span><br><span class="line">            <span class="built_in">update</span>(L, R, x, lson);</span><br><span class="line">        <span class="keyword">if</span>(R&gt;m)</span><br><span class="line">            <span class="built_in">update</span>(L, R, x, rson);</span><br><span class="line">        <span class="built_in">pushup</span>(rt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">ll <span class="title">query</span><span class="params">(<span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> l = <span class="number">1</span>, <span class="type">int</span> r = n,<span class="type">int</span> rt = <span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R) &#123;</span><br><span class="line">            <span class="keyword">return</span> a[rt];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">pushdown</span>(rt);</span><br><span class="line">        <span class="keyword">if</span>(R&lt;=m)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">query</span>(L, R, lson);</span><br><span class="line">        <span class="keyword">if</span>(L&gt;m)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">query</span>(L, R, rson);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(<span class="built_in">query</span>(L, R, lson), <span class="built_in">query</span>(L, R, rson));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; f;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -940,6 +843,91 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E8%AF%AD%E8%A8%80/java/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guaguastandup.github.io/%E8%AF%AD%E8%A8%80/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/pic.JPG">
+      <meta itemprop="name" content="Gua">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瓜瓜站起来">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E8%AF%AD%E8%A8%80/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" class="post-title-link" itemprop="url">优先队列</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-15 11:57:00" itemprop="dateCreated datePublished" datetime="2022-09-15T11:57:00+08:00">2022-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-04 21:30:29" itemprop="dateModified" datetime="2023-03-04T21:30:29+08:00">2023-03-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">语言</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%AD%E8%A8%80/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;<span class="type">int</span>,vector&lt;<span class="type">int</span>&gt;,greater&lt;<span class="type">int</span>&gt; &gt;q;<span class="comment">//小顶堆</span></span><br><span class="line">priority_queue&lt;<span class="type">int</span>&gt; q;<span class="comment">//大顶堆,默认</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">    <span class="type">int</span> c, fc;</span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span> &lt; (<span class="type">const</span> node&amp; a) <span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fc &lt; a.fc;<span class="comment">//大顶</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node&gt; q;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node2</span>&#123;<span class="comment">//重写仿函数</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">oprator</span><span class="params">()</span> <span class="params">(node a,node b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a,x&lt;b.x;<span class="comment">//大顶</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node,vector&lt;node&gt;,node2&gt; q;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E8%AF%AD%E8%A8%80/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
