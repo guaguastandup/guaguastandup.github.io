@@ -36,7 +36,7 @@
             {{ next_url(post.path, post.title or __('post.untitled'), {class: 'post-title-link', itemprop: 'url'}) }}
           {%- else %}
             {{- post.title }}
-            {{- post_edit(post.source) }}
+            <!--{{- post_edit(post.source) }}-->
           {%- endif %}
         </{%- if is_index %}h2{% else %}h1{%- endif %}>
 
@@ -157,7 +157,11 @@
           {%- if post.description and (not theme.excerpt_description or not is_index) %}
             <div class="post-description">{{ post.description }}</div>
           {%- endif %}
-
+          <!--
+          <div class="post-edit-link">
+          {{- post_edit(post.source) }}
+          </div>
+          -->
         </div>
       </header>
     {%- endif %}
@@ -243,10 +247,11 @@
             {%- endfor %}
           </div>
         {%- endif %}
-
         {{ partial('_partials/post/post-footer.swig', {}, {cache: theme.cache.enable}) }}
-
         {{ post_nav(post) }}
+          <div class="post-edit-link">
+            {{- post_edit(post.source) }}
+          </div>
       </footer>
     {% else %}
       <footer class="post-footer">
