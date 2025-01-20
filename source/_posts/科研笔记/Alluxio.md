@@ -3,8 +3,10 @@ title: Alluxio 笔记
 date: 2024-1-16 20:25:00
 tags: 
 - 存储
+- Alluxio
 categories:
-- 学习笔记
+- 01 科研笔记
+- 存储
 ---
 
 Alluxio在帮助统一跨各种平台用户数据的同时还有助于**为用户提升总体 I/O 吞吐量**。

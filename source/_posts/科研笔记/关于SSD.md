@@ -5,7 +5,7 @@ tags:
 - 存储
 - SSD
 categories:
-- 学习笔记
+- 01 科研笔记
 - 存储
 ---
 
