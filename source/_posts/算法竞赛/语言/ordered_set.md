@@ -3,7 +3,7 @@ title: ordered_set
 date: 2022-09-10 11:57:00
 tags: C++
 categories: 
-- 学习笔记
+- 02 学习笔记
 ---
 
 可以在set中找到小于某个数的元素的个数
