@@ -4,8 +4,10 @@ date: 2025-1-20 22:57:00
 tags: 
 - 工具
 - 科研
+- Zotero
 categories:
 - 03 工具笔记
+- Zotero
 ---
 开发了一个Zotero插件，利用[PDF2zh](https://github.com/Byaidu/PDFMathTranslate)，将Zotero中的PDF英文附件翻译为中文，并且保留原格式。
 
