@@ -19,6 +19,7 @@ ssh-keygen -t rsa -C “account-2@gmail.com”
 ```
 假设账号account2生成的密钥保存在\~/.ssh/id_rsa_another和\~/.ssh/id_rsa_another.pub
 
+<!--more-->
 
 ## 编辑config
 \~/.ssh/config
