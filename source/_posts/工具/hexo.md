@@ -5,7 +5,7 @@ tags:
 - 工具
 - Hexo
 categories:
-- 工具
+- 03 工具笔记
 ---
 More info: [Writing](https://hexo.io/docs/writing.html)
 More info: [Generating](https://hexo.io/docs/generating.html)

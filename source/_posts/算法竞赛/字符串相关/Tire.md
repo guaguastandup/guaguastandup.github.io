@@ -2,8 +2,10 @@
 title: Tire字典树
 date: 2022-09-15 11:57:00
 tags: 
+- 字符串
 categories:
-- 数据结构
+- 04 算法笔记
+- 字符串
 ---
 
 ### Bundling

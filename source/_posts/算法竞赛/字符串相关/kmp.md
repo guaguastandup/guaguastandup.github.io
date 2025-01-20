@@ -2,8 +2,10 @@
 title: KMP
 date: 2022-09-12 11:57:00
 tags: 
+- 字符串
 categories: 
-- 算法
+- 04 算法笔记
+- 字符串
 ---
 # prefix function 前缀函数
 ```cpp
