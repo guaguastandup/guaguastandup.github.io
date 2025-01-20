@@ -7,8 +7,6 @@ categories:
 - 学习笔记
 ---
 
-# 关于SSD
-
 https://mp.weixin.qq.com/s/T1l177Sneiyni_QCmi4wBA
 
 <!--more-->

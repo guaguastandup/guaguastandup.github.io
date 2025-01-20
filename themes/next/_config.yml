@@ -99,8 +99,8 @@ creative_commons:
 # Schemes
 # scheme: Muse
 # scheme: Mist
-# scheme: Pisces
-scheme: Gemini
+scheme: Pisces
+# scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -116,19 +116,19 @@ darkmode: false
 # When running the site in a subdirectory (e.g. yoursite.com/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  archives: /archives/ || fa fa-archive
+  Home: / || fa fa-home
   about: /about/ || fa fa-user
+  archives: /archives/ || fa fa-archive
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
-  Preview: / || fa fa-home
-  schedule: /schedule/ || fa fa-calendar
-  #sitemap: /sitemap.xml || fa fa-sitemap
-  #commonweal: /404/ || fa fa-heartbeat
+  # schedule: /schedule/ || fa fa-calendar
+  # sitemap: /sitemap.xml || fa fa-sitemap
+  # commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 # ---------------------------------------------------------------
 # Sidebar Settings
@@ -409,7 +409,9 @@ github_banner:
 font:
   enable: true
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+  # host: "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+  # host: "https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.6.0/style.css"
+  host: "https://fonts.googleapis.com/css2"
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -419,19 +421,20 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Merriweather
+    # family: Merriweather
+    family: LXGW WenKai
     size:
 
   # Font settings for site title (.site-title).
   title:
     external: true
-    family:
+    family: "Merriweather"
     size:
 
   # Font settings for headlines (<h1> to <h6>).
   headings:
     external: true
-    family:
+    family: "Merriweather"
     size:
 
   # Font settings for posts (.post-body).
@@ -442,7 +445,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: "Fira Code"
 
 
 # ---------------------------------------------------------------

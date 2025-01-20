@@ -8,6 +8,7 @@ categories:
 
 ![](linux命令/2022-10-23-11-53-31.png)
 
+<!--more-->
 
 ```sh
 kill -9 {your-PID}
