@@ -3,7 +3,7 @@ title: 本地git配置多个github账号
 date: 2023-03-20 14:02:38
 tags: git
 categories:
-- 工具
+- 03 工具笔记
 ---
 
 ```
