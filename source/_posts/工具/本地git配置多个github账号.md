@@ -1,24 +1,10 @@
 ---
 title: 本地git配置多个github账号
 date: 2023-03-20 14:02:38
-tags: 
+tags: git
 categories:
-- develop
-- git
+- 工具
 ---
-
-hello world
-
-```cpp
-#include<iostream>
-using namespace std;
-
-int main() {
-  int leak = 0;
-  printf("123");
-  return 0;
-}
-
 
 ```
 ## 生成ssh key
@@ -82,5 +68,4 @@ ssh-add ~/.ssh/id_rsa_another
 ```
 
 ## Link
-
 https://blog.csdn.net/cheng5055251/article/details/127544657

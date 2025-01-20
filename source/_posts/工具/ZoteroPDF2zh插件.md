@@ -5,7 +5,7 @@ tags:
 - 工具
 - 科研
 categories:
-- 杂文
+- 工具
 ---
 开发了一个Zotero插件，利用[PDF2zh](https://github.com/Byaidu/PDFMathTranslate)，将Zotero中的PDF英文附件翻译为中文，并且保留原格式。
 

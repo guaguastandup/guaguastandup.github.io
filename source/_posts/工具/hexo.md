@@ -1,6 +1,11 @@
 ---
 title: Hello, Hexo
 date: 2022-09-01 11:57:00
+tags: 
+- 工具
+- Hexo
+categories:
+- 工具
 ---
 More info: [Writing](https://hexo.io/docs/writing.html)
 More info: [Generating](https://hexo.io/docs/generating.html)
