@@ -1,8 +1,10 @@
 ---
 title: 扩展GCD
 date: 2022-09-15 11:57:00
-tags: 
+tags: 数学
 categories: 
+- 算法笔记
+- 数学
 ---
 
 # 扩展GCD

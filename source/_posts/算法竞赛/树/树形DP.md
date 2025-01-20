@@ -2,7 +2,11 @@
 title: 树形DP
 date: 2022-09-13 11:57:00
 tags: 
+- 树
+- DP
 categories: 
+- 算法笔记
+- 动态规划
 ---
 
 # 树形DP

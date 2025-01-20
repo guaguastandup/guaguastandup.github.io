@@ -6,7 +6,7 @@ tags:
 - RDMA
 - 科研报告
 categories: 
-- 科研
+- 01 科研笔记
 ---
 # background
 - traditional software-based TCP/IP stack

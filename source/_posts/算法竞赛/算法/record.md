@@ -3,7 +3,7 @@ title: Record
 date: 2022-09-15 11:57:00
 tags:
 categories: 
-- 算法
+- 算法笔记
 ---
 一些题目的记录
 

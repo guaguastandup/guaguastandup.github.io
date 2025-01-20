@@ -3,7 +3,8 @@ title: 最近公共祖先
 date: 2022-09-13 11:57:00
 tags: 
 categories: 
-- 算法
+- 算法笔记
+- 数据结构
 ---
 # code
 ```cpp

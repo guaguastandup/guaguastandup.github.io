@@ -2,9 +2,10 @@
 title: MIPS
 date: 2022-09-15 11:57:00
 tags: 
-categories: 
+- 汇编
 - 语言
-- MIPS
+categories: 
+- 学习笔记
 ---
 
 MIPS课程笔记

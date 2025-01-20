@@ -2,9 +2,9 @@
 title: Java
 date: 2022-09-15 11:57:00
 tags: 
-categories: 
 - 语言
-- java
+categories: 
+- 学习笔记
 ---
 
 Java课程笔记

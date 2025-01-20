@@ -1,10 +1,9 @@
 ---
 title: ordered_set
 date: 2022-09-10 11:57:00
-tags:
+tags: C++
 categories: 
-- 语言
-- C++
+- 学习笔记
 ---
 
 可以在set中找到小于某个数的元素的个数
